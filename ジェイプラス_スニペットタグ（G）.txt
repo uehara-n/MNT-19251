@@ -1,4 +1,0 @@
-<!-- Event snippet for ‚¨–â‚¢‡‚í‚¹ conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-799032579/zp7GCLGaoYcBEIOKgf0C'});
-</script>
