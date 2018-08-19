@@ -1311,23 +1311,77 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
-//タグマネージャー
-add_action( 'wp_head', function(){
-?>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-<!-- End Google Tag Manager -->
-<?php
-});
-add_action( 'wp_footer', function(){
-?>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<?php
-});
+
+
+function js_tag_gy(){
+  if(is_page('comp')):
+
+  echo "
+  //Yahoo Code for your Conversion Page CVタグ
+  <script type='text/javascript'>
+      //  <![CDATA[
+      var yahoo_conversion_id = 1001011210;
+      var yahoo_conversion_label = 'SqMlCPXJ5YQBEJvFg_0C';
+      var yahoo_conversion_value = 0;
+      //  ]]>
+  </script>
+  <script type='text/javascript' src='https://s.yimg.jp/images/listing/tool/cv/conversion.js'>
+  </script>
+  <noscript>
+      <div style='display:inline;'>
+          <img height='1' width='1' style='border-style:none;' alt='' src='https://b91.yahoo.co.jp/pagead/conversion/1001011210/?value=0&label=SqMlCPXJ5YQBEJvFg_0C&guid=ON&script=0&disvt=true'/>
+      </div>
+  </noscript>
+
+  // CVタグ　リタゲ
+    <script type='text/javascript' language='javascript'>
+      //  <![CDATA[
+      var yahoo_ydn_conv_io = 'ROFLKSgOLDX4bsG5CWwC';
+      var yahoo_ydn_conv_label = '6CPWCMVOM7H8UJ6BNIF503507';
+      var yahoo_ydn_conv_transaction_id = '';
+      var yahoo_ydn_conv_value = '0';
+      // ]]>
+    </script>
+    <script type='text/javascript' language='javascript' charset='UTF-8' src='https://b90.yahoo.co.jp/conv.js'></script>
+
+    // Yahoo Code for your Target List
+    <script type='text/javascript' language='javascript'>
+    // <![CDATA[
+    var yahoo_retargeting_id = 'GT1HKCW7BC';
+    var yahoo_retargeting_label = '';
+    var yahoo_retargeting_page_type = '';
+    var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantity: ''}];
+    //  ]]>
+    </script>
+    <script type='text/javascript' language='javascript' src='https://b92.yahoo.co.jp/js/s_retargeting.js'></script>
+  ";
+
+   else:
+
+    echo"
+    // CVタグ　リタゲ
+      <script type='text/javascript' language='javascript'>
+        //  <![CDATA[
+        var yahoo_ydn_conv_io = 'ROFLKSgOLDX4bsG5CWwC';
+        var yahoo_ydn_conv_label = '6CPWCMVOM7H8UJ6BNIF503507';
+        var yahoo_ydn_conv_transaction_id = '';
+        var yahoo_ydn_conv_value = '0';
+        // ]]>
+      </script>
+      <script type='text/javascript' language='javascript' charset='UTF-8' src='https://b90.yahoo.co.jp/conv.js'></script>
+
+      // Yahoo Code for your Target List
+      <script type='text/javascript' language='javascript'>
+      // <![CDATA[
+      var yahoo_retargeting_id = 'GT1HKCW7BC';
+      var yahoo_retargeting_label = '';
+      var yahoo_retargeting_page_type = '';
+      var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantity: ''}];
+      //  ]]>
+      </script>
+      <script type='text/javascript' language='javascript' src='https://b92.yahoo.co.jp/js/s_retargeting.js'></script>
+      ";
+
+    endif;
+  }
+  add_action( 'wp_footer', 'js_tag_gy');

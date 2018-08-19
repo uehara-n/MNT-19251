@@ -2,14 +2,14 @@
 <html>
 <head>
 	<!--アナリティクスタグ-->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113127042-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113127042-1"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'UA-113127042-1');
-</script> -->
+</script>
 <!--アナリティクスタグ-->
 
 <!-- Global site tag (gtag.js) - Google Ads: 799032579 -->
@@ -22,39 +22,12 @@ gtag('config', 'UA-113127042-1');
   gtag('config', 'AW-799032579');
 </script>
 
-
-<!-- Global site tag (gtag.js) - Google Ads: 799032579 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-799032579"></script>
+<?php if(is_page('comp')): ?>
+<!-- Event snippet for お問い合わせ conversion page -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-799032579');
+  gtag('event', 'conversion', {'send_to': 'AW-799032579/zp7GCLGaoYcBEIOKgf0C'});
 </script>
-
-<!-- CVタグ　リタゲ -->
-<script type="text/javascript" language="javascript">
-  /* <![CDATA[ */
-  var yahoo_ydn_conv_io = "ROFLKSgOLDX4bsG5CWwC";
-  var yahoo_ydn_conv_label = "6CPWCMVOM7H8UJ6BNIF503507";
-  var yahoo_ydn_conv_transaction_id = "";
-  var yahoo_ydn_conv_value = "0";
-  /* ]]> */
-</script>
-<script type="text/javascript" language="javascript" charset="UTF-8" src="https://b90.yahoo.co.jp/conv.js"></script>
-
-<!-- Yahoo Code for your Target List -->
-<script type="text/javascript" language="javascript">
-/* <![CDATA[ */
-var yahoo_retargeting_id = 'GT1HKCW7BC';
-var yahoo_retargeting_label = '';
-var yahoo_retargeting_page_type = '';
-var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantity: ''}];
-/* ]]> */
-</script>
-<script type="text/javascript" language="javascript" src="https://b92.yahoo.co.jp/js/s_retargeting.js"></script>
-
+<?php endif; ?>
 
 
 <meta charset="UTF-8">
