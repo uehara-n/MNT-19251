@@ -1,9 +1,0 @@
-<script type="text/javascript" language="javascript">
-  /* <![CDATA[ */
-  var yahoo_ydn_conv_io = "ROFLKSgOLDX4bsG5CWwC";
-  var yahoo_ydn_conv_label = "6CPWCMVOM7H8UJ6BNIF503507";
-  var yahoo_ydn_conv_transaction_id = "";
-  var yahoo_ydn_conv_value = "0";
-  /* ]]> */
-</script>
-<script type="text/javascript" language="javascript" charset="UTF-8" src="https://b90.yahoo.co.jp/conv.js"></script>
